@@ -1,15 +1,15 @@
 "use strict";
 //count is of "type" number
-var count = 5;
+let count = 5;
 count = 5;
 // count = "string"
 //Const type is a literal
-var fname = 'Justin';
+const fname = 'Justin';
 //type any can be any type of data(string, number i.e). This will allow specificity of data type
-var testing;
+let testing;
 testing = 5;
 // Declaring a variable
-var student = {
+let student = {
     fname: "Andy",
     lname: "Anderson",
     grade: 12
@@ -21,7 +21,7 @@ function toString(student) {
 // console.log(toString(student));
 // console.log(fname);
 function add(x, y) {
-    var results = x + y;
+    let results = x + y;
 }
 //Tuple
 function sendMessage() {
@@ -31,6 +31,6 @@ function sendMessage() {
             grade: 12
         }];
 }
-var _a = sendMessage(), statusResult = _a[0], data = _a[1];
+const [statusResult, data] = sendMessage();
 if (statusResult == 'success')
     console.log(data);
