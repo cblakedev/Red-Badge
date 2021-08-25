@@ -20,11 +20,11 @@ Use the isJSON function to test */
 function isJSON(j: JSONValue){}
 type Primitive = string | number | boolean | null
 
-type JSONObject = {fname: string, data: JSONArray | Primitive}
-type JSONArray = Array<Primitive | JSONObject>
+type JSONObject = {[k: string]: JSONValue}
+type JSONArray = JSONValue[] // or Array<JSONValue>
 type JSONValue = Primitive | JSONArray | JSONObject
 
-let testing1: JSONValue = { fname: "Justin", data: [1, 2, 3]}
+let testing1: JSONValue = {fname: "Justin", data: [1, 2, 3]}
 let testing2: JSONValue = "Test string"
 let testing3: JSONValue = [1, 2, "Hello", { fname: "Justin"}] 
 
